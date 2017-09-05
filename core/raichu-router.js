@@ -7,8 +7,7 @@ const makeRoute = require('path-match')({
   end: false,
 })
 
-
-module.exports.Route = class Route {
+class Route {
   constructor(path, fns) {
     this.route = makeRoute(path)
     this.composeFn = compose(fns)
@@ -26,6 +25,8 @@ module.exports.Route = class Route {
     return this.composeFn.call(this, ctx)
   }
 }
+
+module.exports.Route = Route
 
 module.exports.Router = class Router {
   constructor() {
@@ -51,7 +52,7 @@ module.exports.Router = class Router {
       let params = route.match(path)
 
       if (params === false) {
-        break;
+        return
       }
 
       return route.call(params, ctx)

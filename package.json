@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +20,8 @@
     "log4js": "^2.3.3",
     "path-match": "^1.2.4",
     "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.0"
   }
 }

@@ -1,4 +1,4 @@
-const Router = require('./raichu-router');
+const Router = require('./raichu-router').Router;
 const Promise = require('bluebird')
 
 module.exports = class Middleware {

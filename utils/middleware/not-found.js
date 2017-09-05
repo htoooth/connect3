@@ -1,4 +1,4 @@
-const logger = require('./logger')
+const logger = require('../logger')
 
 module.exports = async function ({req, res}) {
   logger.error('not found method')
