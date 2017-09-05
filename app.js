@@ -17,5 +17,5 @@ try {
 app.use(middleware)
 
 app.listen(config.port, () => {
-  logger.info(`${pkg.name} server listen port ${config.port}`)
+  logger.info(`${pkg.name} server listen at ${config.port}`)
 })
