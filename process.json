@@ -1,0 +1,19 @@
+{
+    "apps": [
+        {
+            "name": "eterm-app",
+            "script": "app.js",
+            "instances": "1",
+            "exec_mode": "cluster",
+            "merge_logs": true,
+            "log_date_format": "YYYY-MM-DD HH:mm",
+            "error_file": "c://logs/node//eterm-node-err.log",
+            "out_file": "c://logs/node//eterm-node-out.log",
+            "env": {
+                "TZ": "Asia/Shanghai",
+                "PORT": 6002,
+                "NODE_ENV": "production"
+            }
+        }
+    ]
+}
